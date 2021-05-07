@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "description": "HCL v2 parser for JavaScript",
   "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "url": "https://github.com/benc-uk/hcl2-parser.git",
+    "type": "git"
   },
+  "keywords": [
+    "terraform",
+    "hcl",
+    "json"
+  ],
   "author": "Ben Coleman",
   "license": "MIT"
 }
