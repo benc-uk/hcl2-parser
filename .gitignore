@@ -1,2 +1,4 @@
 vendor/*
 parser
+**/node_modules/**
+node_modules

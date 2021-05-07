@@ -1,6 +1,6 @@
 {
   "name": "hcl2-parser",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "HCL v2 parser for JavaScript",
   "main": "dist/index.js",
   "repository": {

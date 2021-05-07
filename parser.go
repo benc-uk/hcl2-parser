@@ -22,6 +22,7 @@ func parseToString(input string) (output string, err error) {
 	return output, nil
 }
 
+// Parse a HCL string into a JSON object
 func parseToObject(input string) (output *js.Object, err error) {
 	jsonString, err := parseToString(input)
 	if err != nil {
