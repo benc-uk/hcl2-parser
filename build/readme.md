@@ -1,5 +1,17 @@
 ## Build Notes
 
+## EASY - With Docker
+
+Run from root of project
+
+```
+docker build . -f ./build/Dockerfile -t hcl2-parser-build
+mkdir -p $(pwd)/dist
+docker run --rm -it -v $(pwd)/dist:/tmp/out hcl2-parser-build
+```
+
+## VERY HARD - Without Docker
+
 Due to a 3 year old issue with GopherJS not supporting Go modules, building this is serious pain. Serious pain
 
 Install Go 1.12, note it's safe to do this alongside your system Go install, it will not replace it

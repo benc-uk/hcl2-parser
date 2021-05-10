@@ -5,8 +5,6 @@ import (
 	"github.com/tmccombs/hcl2json/convert"
 )
 
-type jsonObj map[string]interface{}
-
 func main() {
 	js.Module.Get("exports").Set("parseToString", parseToString)
 	js.Module.Get("exports").Set("parseToObject", parseToObject)
