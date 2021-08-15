@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	js.Module.Get("exports").Set("parseToString", parseToString)
-	js.Module.Get("exports").Set("parseToObject", parseToObject)
+	js.Module.Get("exports").Set("parseToString", jsParseToString)
+	js.Module.Get("exports").Set("parseToObject", jsParseToObject)
 }
 
 // Parse a HCL string into a JSON string
@@ -30,4 +30,16 @@ func parseToObject(input string) (output *js.Object, err error) {
 
 	obj := js.Global.Get("JSON").Call("parse", string(jsonString))
 	return obj, nil
+}
+
+func jsParseToObject(input string) (output *js.Object) {
+	obj, _ := parseToObject(input)
+
+	return obj
+}
+
+func jsParseToString(input string) (output string) {
+	jsonString, _ := parseToString(input)
+
+	return jsonString
 }
